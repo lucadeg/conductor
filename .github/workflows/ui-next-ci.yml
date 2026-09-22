@@ -1,17 +1,9 @@
+
 name: UI v2 CI
 
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "ui-next/**"
-  push:
-    branches:
-      - main
-    paths:
-      - "ui-next/**"
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: read
 

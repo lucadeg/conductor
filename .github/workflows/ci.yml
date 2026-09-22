@@ -1,14 +1,7 @@
+
 name: CI
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "conductor-clients/**"
-  pull_request:
-    paths-ignore:
-      - "conductor-clients/**"
   workflow_dispatch:
     inputs:
       redis_es8:
@@ -36,6 +29,7 @@ on:
         type: boolean
         default: false
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   build:
     runs-on: ubuntu-latest
